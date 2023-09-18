@@ -1,9 +1,12 @@
 {
   "name": "cards",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
+  "homepage": "https://github.com/egaletsky/Cards",
   "type": "module",
   "scripts": {
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -11,6 +14,7 @@
     "lint": "eslint --fix src/**/*.{tsx,ts,jsx,js} --no-error-on-unmatched-pattern && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.8"
